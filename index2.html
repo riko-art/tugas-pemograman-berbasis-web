@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+    <style>
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 0 auto;
+            border-radius: 20px;
+            background-color: gray;
+            width: 400px;
+            text-align: center;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+        background-color: #3498db; 
+        color: white; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        font-size: 16px; 
+        transition: background-color 0.3s ease; 
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .grade-table {
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .grade-table td, .grade-table th {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="proses.html" method="post">
+        <label for="NIM">NIM :</label>
+        <input type="text" name="NIM" id="NIM" inputmode="numeric" value="1482300057">
+        <br>
+        <label for="nama">Nama Mahasiswa :</label>
+        <input type="text" name="Nama_Mahasiswa" id="nama" value="RIKO">
+        <br>
+        <label for="tugas">Tugas :</label>
+        <input type="text" name="Tugas" id="tugas" inputmode="numeric" value="90">
+        <br>
+        <label for="quiz">Quiz :</label>
+        <input type="text" name="Quiz" id="quiz" inputmode="numeric" value="89">
+        <br>
+        <label for="uts">UTS :</label>
+        <input type="text" name="UTS" id="uts" inputmode="numeric" value="90">
+        <br>
+        <label for="uas">UAS :</label>
+        <input type="text" name="UAS" id="uas" inputmode="numeric" value="90">
+        <br>
+        <label for="na">Nilai Ahkir :</label>
+        <input type="text" id="na" inputmode="numeric" value="90">
+        <br>
+        <label for="Grade">Grade :</label>
+        <input type="text" id="Grade" value="A">
+        <input type="submit" value="Submit">
+    </form>
+         <div class="table-section">
+            <h2>Daftar Mahasiswa</h2>
+            <table class="grade-table">
+                <tr>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Tugas</th>
+                    <th>Quiz</th>
+                    <th>UTS</th>
+                    <th>UAS</th>
+                    <th>Nilai Akhir</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>adit</td>
+                    <td>90</td>
+                    <td>88</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>angga</td>
+                    <td>87</td>
+                    <td>76</td>
+                    <td>70</td>
+                    <td>70</td>
+                    <td>84</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>yoga</td>
+                    <td>90</td>
+                    <td>89</td>
+                    <td>85</td>
+                    <td>85</td>
+                    <td>87</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>emil</td>
+                    <td>90</td>
+                    <td>80</td>
+                    <td>70</td>
+                    <td>70</td>
+                    <td>75</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>rijal</td>
+                    <td>80</td>
+                    <td>85</td>
+                    <td>90</td>
+                    <td>80</td>
+                    <td>84</td>
+                    <td>B</td>
+                </tr>
+            </table>
+            <p class="note">
+                Nilai akhir = (0.2 * Tugas) + (0.2 * Quiz) + (0.3 * UTS) + (0.3 * UAS) <br>
+                A – NA > 85, B – NA > 70, C – NA > 60, D – NA > 40, E – NA > 30, F – NA > 0
+            </p>
+</body>
+</html>
