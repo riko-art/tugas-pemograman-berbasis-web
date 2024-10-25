@@ -6,15 +6,28 @@
     <title>Profil</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="id1">
     <header>
-        <h1>Profil</h1>
+        <h1 id="demo"></h1>
+
+    <script>
+    document.getElementById("demo").innerHTML = "profil";
+    </script>
     </header>
     <div class="container">
     <img src="p.jpg" alt="gambar" style="width: 150px; height: auto;">
-    <p><b>Nama   : </b>Riko</p>
+    <p id="p1">Hello World!</p>
+    <script>
+    document.getElementById("p1").innerHTML = "Nama : Riko"
+    </script>
     <p><b>Asal daerah   : </b>Lamongan,Jawa Timur</p>
-    <p><b>SMA asal : </b>MAN 1 Lamongan</p>
+    <p id="intro" style="display: none;" >MAN 1 Lamongan</p>
+    <p id="demoo" style="font-weight: bold;"></p>
+    <script>
+    const element = document.getElementById("intro");        
+    document.getElementById("demoo").innerHTML = 
+    "SMA Asal: " + element.innerHTML;
+</script>
     <p><b><u>Motivasi studi di sistekin </u></b></p>
     <p>Motivasi saya memilih 
     studi sistekin dikarenakan prospek kerjanya yang luas</p>
@@ -26,6 +39,10 @@
         </p>
     </div>
     <p><b>Link Referensi : </b><a href="https://www.w3schools.com/html/default.asp">W3 School</a></p>
-    </div>
+    <button type="button" 
+        onclick="document.getElementById('id1').style.backgroundColor = 'red'">
+        ubah warna</button>
+</div>
+
 </body>
 </html>
